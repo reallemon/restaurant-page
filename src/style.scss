@@ -14,7 +14,47 @@ body {
   color: white;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 10% 20% auto;
+  grid-template-rows: repeat(6, auto);
+  grid-column-gap: 10px;
+  max-width: 80vw;
+  margin: 0 auto;
+  grid-template-areas:
+    'icon header menu'
+    'content content content'
+    'content content content'
+    'content content content'
+    'content content content'
+    'content content content';
+}
+
 .icon {
   max-width: 10vw;
   max-height: 10vh;
+  grid-area: icon;
+  align-self: center;
+}
+
+.content {
+  grid-area: content;
+}
+
+.title {
+  grid-area: header;
+}
+
+.menu {
+  grid-area: menu;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 1em;
+  list-style-type: none;
+}
+
+.active-tab {
+  color: $lighterAccent;
 }

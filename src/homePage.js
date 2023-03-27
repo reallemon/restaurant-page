@@ -1,13 +1,9 @@
 export default function fillHomePage() {
   const content = document.getElementById('content');
-  const heading = document.createElement('h1');
-  heading.textContent = 'Taco Bell';
 
-  const image = document.createElement('img');
-  image.src =
-    'https://locations.tacobell.com/permanent-b0b701/assets/images/TBUS_Logo.7bd20747.svg';
-
-  image.classList.add('icon');
+  const homeContainer = document.createElement('div');
+  homeContainer.id = 'home-content';
+  homeContainer.classList.add('content');
 
   const shilling = document.createElement('p');
   shilling.textContent =
@@ -21,7 +17,7 @@ export default function fillHomePage() {
     'of Tex-Mex cuisine, Taco Bell may be a go-to spot for satisfying ' +
     'their cravings.';
 
-  content.appendChild(image);
-  content.appendChild(heading);
-  content.appendChild(shilling);
+  homeContainer.appendChild(shilling);
+
+  content.appendChild(homeContainer);
 }
