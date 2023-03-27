@@ -53,6 +53,10 @@ body {
   align-items: center;
   gap: 1em;
   list-style-type: none;
+
+  li:hover {
+    cursor: pointer;
+  }
 }
 
 .active-tab {
